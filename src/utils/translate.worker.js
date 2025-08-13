@@ -32,7 +32,7 @@ self.addEventListener('message', async (event) => {
         callback_function: x => {
             self.postMessage({
                 status: 'update',
-                output: translator.tokenizer.decod(x[0].output_token_ids, {
+                output: translator.tokenizer.decode(x[0].output_token_ids, {
                     skip_special_tokens: true
                 })
             })
